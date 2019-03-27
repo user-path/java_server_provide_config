@@ -18,7 +18,7 @@ server:
 spring:
   application:
     name: USER-OPERATION
-  profiles: dev
+  profiles: dev1
 eureka:
   client:
     service-url:
