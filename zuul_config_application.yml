@@ -1,0 +1,36 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: ZUUL-CLIENT
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7100/eureka
+  instance:
+    instance-id: zuulcontrol
+    prefer-ip-address: true
+zuul:
+  prefix: /aigou
+  ignored-services: '*'
+  routes:
+    login.serviceId: login-service
+    login.path: /login/**
+    user.serviceId: user-operation
+    user.path: /user/**
+---
+spring:
+  profiles:
+    active: zuul
+---
+server:
+  port: 9527
+spring:
+  application:
+    name: ZUUL-CLIENT
+  profiles: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7100/eureka
+
