@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8100
+spring:
+  application:
+    name: LOGIN-SERVICE
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7100/eureka
+---
+server:
+  port: 8001
+spring:
+  application:
+    name: USER-OPERATION
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7100/eureka
