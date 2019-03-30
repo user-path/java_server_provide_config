@@ -35,7 +35,7 @@ server:
   port: 8002
 spring:
   application:
-    name: BRAND-SERVICE
+    name: PRODUCT-SERVICE
   profiles: dev2
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
