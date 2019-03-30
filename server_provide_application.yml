@@ -30,3 +30,21 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7100/eureka
+---
+server:
+  port: 8002
+spring:
+  application:
+    name: BRAND-SERVICE
+  profiles: dev2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///aigou
+    username: root
+    password: 123456
+mybatis-plus:
+  type-aliases-package: com.cn.aigou.domain,com.cn.aigou.query
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7100/eureka
