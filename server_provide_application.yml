@@ -8,6 +8,13 @@ spring:
   application:
     name: LOGIN-SERVICE
   profiles: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///aigou
+    username: root
+    password: 123456
+mybatis-plus:
+  type-aliases-package: com.cn.aigou.domain
 eureka:
   client:
     service-url:
