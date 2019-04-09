@@ -38,7 +38,7 @@ spring:
     name: PRODUCT-SERVICE
   profiles: dev2
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql:///aigou?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: 123456
